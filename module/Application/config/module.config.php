@@ -60,6 +60,9 @@ return array(
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
+        'factories' => array(
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory', 
+        ),
     ),
     'translator' => array(
         'locale' => 'en_US',
@@ -99,4 +102,76 @@ return array(
             ),
         ),
     ),
+    
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+            array(
+                'label' => 'Album',
+                'route' => 'album',
+                'pages' => array(
+                    array(
+                        'label' => 'Add',
+                        'route' => 'album',
+                        'action' => 'add',
+                    ),
+                    array(
+                        'label' => 'Edit',
+                        'route' => 'album',
+                        'action' => 'edit',
+                    ),
+                    array(
+                        'label' => 'Delete',
+                        'route' => 'album',
+                        'action' => 'delete',
+                    ),
+                ),
+            ),
+            array(
+                'label' => 'Blog',
+                'route' => 'blog',
+                'pages' => array(
+                    array(
+                        'label' => 'Add',
+                        'route' => 'blog',
+                        'action' => 'add',
+                    ),
+                    array(
+                        'label' => 'Edit',
+                        'route' => 'blog',
+                        'action' => 'edit',
+                    ),
+                    array(
+                        'label' => 'Delete',
+                        'route' => 'blog',
+                        'action' => 'delete',
+                    ),
+                ),
+            ),
+            array(
+                'label' => 'Tasks',
+                'route' => 'task',
+                'pages' => array(
+                    array(
+                        'label' => 'Add',
+                        'route' => 'task',
+                        'action' => 'add',
+                    ),
+                    array(
+                        'label' => 'Edit',
+                        'route' => 'task',
+                        'action' => 'edit',
+                    ),
+                    array(
+                        'label' => 'Delete',
+                        'route' => 'task',
+                        'action' => 'delete',
+                    ),
+                ),
+            ),
+        ),
+    )
 );
